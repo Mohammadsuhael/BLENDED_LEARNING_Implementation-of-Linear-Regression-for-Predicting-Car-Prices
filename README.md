@@ -44,51 +44,27 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 df=pd.read_csv("CarPrice_Assignment (1).csv")
 df
-````
-
-![image](https://github.com/user-attachments/assets/48b27cbf-f555-4656-8897-c5de4544e051)
 
 
-```
+
 2.x = df[['enginesize','horsepower','citympg','highwaympg']]
 y = df['price']
 x_train,x_test,y_train,y_test = train_test_split(x,y,test_size=0.2,random_state=42)
 df.head()
-```
-![image](https://github.com/user-attachments/assets/05eb1cdd-2844-4c61-868e-7e09cf796c39)
 
-```
 
 3.df.describe()
-```
-![image](https://github.com/user-attachments/assets/6833f439-eebb-4aff-a54b-a080393ad617)
 
-```
 4.df.head()
-```
-![image](https://github.com/user-attachments/assets/924d2ee1-b22c-49ba-8f4a-02b82316fcae)
 
-```
 5.df.tail()
-```
-![image](https://github.com/user-attachments/assets/b1bb9a1a-7ed8-448e-bfdb-f27ddfc915c7)
 
-```
 6.df.notnull()
-```
-![image](https://github.com/user-attachments/assets/ef87254c-7dee-4171-b717-935297634614)
 
-```
 7.df.isnull()
-```
-![image](https://github.com/user-attachments/assets/8767a725-faea-448f-972f-cc5ec7518cb6)
 
-```
 8.df.info
-```
-![image](https://github.com/user-attachments/assets/b6b305db-2980-4fc2-ac5f-1f55380f343f)
 
-```
 9.scaler= StandardScaler()
 x_train_scaled = scaler.fit_transform(x_train)
 x_test_scaled = scaler.transform(x_test)
@@ -110,11 +86,7 @@ print(f"{'MSE':>12}: {mean_squared_error(y_test,y_pred):>10.2f}")
 print(f"{'RMSE':>12}: {np.sqrt(mean_squared_error(y_test,y_pred))}")
 print(f"{'R-squared':>12}: {r2_score(y_test,y_pred):>10.2f}")
 print("="*50)
-```
-![image](https://github.com/user-attachments/assets/fdc35c5e-953b-47fa-b685-44d8387c19f0)
 
-
-```
 10.
 
 # 1. Linearity Check
@@ -141,10 +113,7 @@ plt.xlabel("Predicted Price ($)")
 plt.ylabel("Residuals ($)")
 plt.grid(True)
 plt.show()
-```
-![image](https://github.com/user-attachments/assets/24e24b7b-acb1-4982-9374-d2380920f649)
 
-```
 11. # 4. Normality of residuals
 fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(12, 5))
 sns.histplot(residuals, kde=True, ax=ax1)
@@ -155,11 +124,29 @@ plt.tight_layout()
 plt.show()
 
 ```
-![image](https://github.com/user-attachments/assets/1d246029-4e79-4d69-8526-f60f904d9a36)
 
 
 ## Output:
-![simple linear regression model for predicting the marks scored](sam.png)
+![image](https://github.com/user-attachments/assets/48b27cbf-f555-4656-8897-c5de4544e051)
+![image](https://github.com/user-attachments/assets/05eb1cdd-2844-4c61-868e-7e09cf796c39)
+![image](https://github.com/user-attachments/assets/6833f439-eebb-4aff-a54b-a080393ad617)
+![image](https://github.com/user-attachments/assets/924d2ee1-b22c-49ba-8f4a-02b82316fcae)
+![image](https://github.com/user-attachments/assets/b1bb9a1a-7ed8-448e-bfdb-f27ddfc915c7)
+![image](https://github.com/user-attachments/assets/b1bb9a1a-7ed8-448e-bfdb-f27ddfc915c7)
+![image](https://github.com/user-attachments/assets/ef87254c-7dee-4171-b717-935297634614)
+![image](https://github.com/user-attachments/assets/8767a725-faea-448f-972f-cc5ec7518cb6)
+![image](https://github.com/user-attachments/assets/b6b305db-2980-4fc2-ac5f-1f55380f343f)
+
+![image](https://github.com/user-attachments/assets/fdc35c5e-953b-47fa-b685-44d8387c19f0)
+
+
+![image](https://github.com/user-attachments/assets/24e24b7b-acb1-4982-9374-d2380920f649)
+
+
+![image](https://github.com/user-attachments/assets/1d246029-4e79-4d69-8526-f60f904d9a36)
+
+
+
 
 
 ## Result:
